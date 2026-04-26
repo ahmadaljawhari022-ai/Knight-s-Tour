@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>خوارزمية مسار الحصان - التراجع</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f4f4f4;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: repeat(8, 45px);
+        grid-template-rows: repeat(8, 45px);
+        border: 4px solid #333;
+      }
+      .cell {
+
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        font-size: 0.9em;
+      }
+      .white {
+        background: #fff;
+      }
+      .black {
+        background: #ddd;
+      }
+      .visited {
+        background: #4caf50 !important;
+        color: white;
+        transition: 0.2s;
+      }
+      .controls {
+        margin-top: 20px;
+        gap: 10px;
+        display: flex;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>حل لغز الحصان (خوارزمية التراجع)</h2>
+    <div id="board" class="board"></div>
+    <div class="controls">
+      <button onclick="solveGame()" style="background: #2196f3; color: white">
+        بدء الحل التلقائي
+      </button>
+      <button onclick="location.reload()">إعادة ضبط</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
